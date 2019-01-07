@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="da">
+<script defer src="./js/all.js?{{ jst }}"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/kortgebyr.css?{{ csst }}">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+<meta name="keywords" content="" id="meta-keywords">
+<meta id="title" name="title" content="Kortgebyr Norge: Oversikt over gebyr hos innløsere og gateways">
+<title id="tab-title">Nettbetalingsløsninger: Oversikt over gebyr hos innløsere og gateways</title>
+<meta charset="utf-8">
+<meta id="description" name="description" content="Nettbetalingsløsninger er en sammenligningsside for kortgebyr. Vi vil gi deg en best mulig oversikt slik at du kan velge den nettbetalingsløsningen som passer deg best.">
+<link rel="icon" type="image/png" href="./img/favicon.png">
+<base target="_blank">
+<body class="body-background">
+<div id="google-script"></div>
+  <div class="center-content">
+    <!--menu control section -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 title-section">
+        <h1 id="title-header"></h1>
+        <h2 id="sub-title"></h2>
+        <p id="sub-paragraph"></p>
+      </div>
+    </div>
+
+    <div class="row">
+
+
+      <div id="the-top-offset"></div>
+      <div id="menu-control" class="menu-control col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+        <form id="form" class="clearfix" autocomplete="off">
+          <div class="row">
+            <div class="form-group">
+              <div class="menu acquirer_menu">
+                <label class="acqlabel" id="dropdown-acquirer"> Indløsning
+                </label>
+                <select name="acquirer" id="acquirer" class="form-control">
+                </select>
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <div class="menu menu-2 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <label class="acqlabel label-headers" id="transaction_information">Transaction information</label>
+                <div class="transaction-information">
+                  <label id="transaction_per_month" class="acqlabel_subheader">
+                  </label>
+                  <input name="qty" type="number" min="0" class="field">
+                </div>
+
+                <div class="transaction-information">
+                  <label id="avg_order_value" class="acqlabel_subheader">
+                  </label>
+                  <input name="avgvalue" type="number" min="0" class="field">
+                  <select name="currency" class="form-control" id="selectedCountry">
+                    <option value="DKK">DKK</option>
+                    <option value="SEK">SEK</option>
+                    <option value="NOK">NOK</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                  </select>
+                </div>
+
+
+
+
+                <div class="transaction-information" id="features_checkbox">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <div class="menu col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <label class="acqlabel label-headers" id="card_types">Card types</label>
+                <div class="transaction-information" id="cardInformation">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- table with all the information -->
+      <div id="outer-div" class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 table-content">
+      </div>
+
+    </div>
+    <div class="row">
+        <div class="" id="load_about_site">
+
+        </div>
+    </div>
+  </div>

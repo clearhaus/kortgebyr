@@ -1,0 +1,102 @@
+{
+  "translations": {
+    "transaction_information": "Transaksjons information",
+    "cheapest_solution": "Billigste løsning",
+    "transaction_per_month": "Transaksjoner pr. måned",
+    "avg_order_value": "Gjennomsnittlig ordreverdi",
+    "card_types": "Korttyper",
+    "included": "Inkludert",
+    "payment_solution": "Betalingsløsning",
+    "package_solution": "Pakkeløsning",
+    "table-acquirer": "Innløser",
+    "dropdown-acquirer": "Innløser",
+    "means_of_payment": "Betalingsmåter",
+    "setup": "Oppsett",
+    "subscription": "Abonnement",
+    "transactions_fees": "Transaksjonsgebyr",
+    "total_per_month": "Totalt per måned",
+    "total_per_transaction": "Totalt per transaksjon",
+    "title-header": "Nettbetalingsløsninger.no",
+    "sub-title": "Din guide for å velge en optimal betalingstjeneste for din butikk"
+  },
+  "About_site":{
+    "explanation": "Hva er nettbetalingsløsninger.no?",
+    "faq-text-1": "Nettbetalingsløsninger er en sammenligningsside for kortgebyr. Vi vil gi deg en best mulig oversikt slik at du kan velge den nettbetalingsløsningen som passer deg best. Vår oppgave er å kontinuerlig oppdatere vår informasjon slik at du får best mulig beslutningsgrunnlag.",
+    "explanation-sub-header-1": "Hva inngår i begrepet betalingsløsninger?",
+    "faq-text-2": "Betalingsløsninger er det som gjør det mulig for deg å ta betalt i din butikk. Det finnes mange forskjellige typer betalingsløsninger, og flere forskjellige aktører. E-handelskonseptet er ganske enkelt å forstå, men selve betalingsnettverket kan være litt mer komplisert. Betalingsnettverket beskriver forholdet og samarbeidet mellom alle aktørene som tar del i en transaksjon.",
+    "faq-text-3": "Det enkleste betalingsnettverket å ta utgangspunkt i, er firepartsnettverket. I firepartsnettverket har man fire hovedparter, men i noen tilfeller kan det være opp mot 6 parter. Kortholder (kunden), forhandler(eier av butikken), gateway, innløser, kortutsteder(som regel en bank) og en kortorganisasjon (for eksempel Visa eller Mastercard).",
+    "faq-text-4": "Kort fortalt består transaksjonen av to ulike deler: I den første delen blir kortinformasjonen ført fra kortholder, gjennom alle de andre partene og frem til kortutsteder. Kortutsteder godkjenner betalingsforespørselen (dersom kortinformasjonen er gyldig).",
+    "faq-text-5": "Den andre delen er når pengene blir overført fra kortutsteder til forhandler. Pengene går gjennom en innløser, og når forhandleren har mottatt pengene sine er betalingsprosessen ferdig.",
+    "explanation-sub-header-2": "Gatewayer og innløsere",
+    "faq-text-6": "På denne nettsiden skal vi sammenligne priser og gebyrer fra ulike gatewayer og innløsere, da vi anser denne typer avtaler som mest relevant for deg som butikkeier.",
+    "faq-text-7": "Noen aktører opptrer alene og tilbyr både innløsning og betalingsgateway, mens andre er individuelle innløsere/gatewayer som har inngått partnerskap med andre aktører for å kunne tilby deg en helhetlig pakke.",
+    "faq-text-8": "Videre vil vi kort forklare hva en innløser og gateway er, slik at du har litt bakgrunnsinformasjon om hva de gjør og kan tilby deg",
+    "explanation-sub-header-3": "Innløser",
+    "faq-text-9": "En innløser er en institusjon som behandler transaksjonene fra kunde til butikk. Når innløseren mottar kortinformasjon fra gatewayen, er oppgaven hans å autorisere og autentisere betalingen. Ved autoriseringen sjekker innløser med den utstedende banken, om kortet er gyldig og at det er nok penger på konto for å gjennomføre kjøpet. Autentiseringen handler om å verifisere identiteten på personen som gjennomfører kjøpet. Autentiseringen gjøres, som oftest, med 3-D Secure.",
+    "faq-text-10": "Etter at transaksjonen er godkjent vil innløseren heve pengene på kundens(kortholders) konto, oppbevare pengene og deretter utbetale pengene til deg som butikkeier. Når pengene blir utbetalt er regulert gjennom avtalen dere har. Dette kan for eksempel være daglig, ukentlig eller månedlig.",
+    "faq-text-11": "Det finnes ingen innløser som passer til alle butikker, men du bør velge en innløser som passer best til din forretning. I tillegg til prisene som blir presentert på denne nettsiden bør du tenke på dette før du velger innløser: typen av betalingskort du vil at butikken din skal akseptere, hvor mange transaksjoner du kommer til å ha og gjennomsnittlig transaksjonsbeløp.",
+    "faq-text-12": "For å kunne akseptere online betalinger må du ha en innløsningsavtale hos en innløser.",
+    "explanation-sub-header-4": "Gateway",
+    "faq-text-16": "En gateway er ansvarlig for betalingsvinduet i butikken din. Gatewayen samler inn kortinformasjonen og videresender en kryptert versjon til innløseren. Gatewayen er ofte den parten som samhandler mest med forhandleren. Noen forhandlere velger å ha mer enn en gateway, da ulike gatewayer kan ha ulike fordeler. For eksempel kan en tilby lave gebyr per transaksjon, mens en annen har et godt system for å unngå svindel. På denne nettsiden tar vi bare utgangspunkt i en gateway per avtale.",
+    "faq-text-17": "På samme måte som det ikke finnes en innløser som passer til alle, finnes det ikke en gateway som passer til alle butikker. Det er noen aspekt du bør ta til etterretning, utenom pris, før du velger en gateway: hvilke valuta vil du tilby transaksjoner i, korttyper gatewayen aksepterer, verktøyer for å forhindre svindel og kundeservicen gatewayen tilbyr.",
+    "faq-text-18": "Ekstra gebyrer kan oppstå, utover de som er opplyst på denne siden. Dersom du har endringsforslag eller ny informasjon kan du sende en mail til nettbetalingsløsninger@clearhaus.com.",
+    "sponsor-clearhaus": "Denne siden er sponset av Clearhaus.com",
+    "faq-text-19": "*Prisene til DIBS/Nets er individuelle for hver enkelt kunde, og det ligger ikke ute noe prisestimat vi kan benytte."
+  },
+  "index_description":{
+    "description": "Nettbetalingsløsninger er en sammenligningsside for kortgebyr. Vi vil gi deg en best mulig oversikt slik at du kan velge den nettbetalingsløsningen som passer deg best.",
+    "title": "Nettbetalingsløsninger: Oversikt over gebyr hos innløsere og gateways"
+  },
+  "about_description":{
+    "title": "Nettbetalingsløsninger: Hva ønsker vi å bidra med",
+    "description": "Nettbetalingsløsninger.no er en side som er opprettet for deg som forhandler, slik at det skal være enklere og mer oversiktlig å velge betalingsløsning. Vår oppgave er å kontinuerlig oppdatere vår informasjon slik at du får best mulig beslutningsgrunnlag. Betalingsløsninger er det som gjør det mulig for deg å ta betalt i din nettbutikk. Det finnes mange forskjellige typer betalingsløsninger, og flere forskjellige aktører. Noen aktører opptrer alene og tilbyr både innløsning og betalingsgateway, mens andre er individuelle innløsere/betalingsgatewayer som har inngått partnerskap med andre aktører for å kunne tilby deg en helhetelig pakke. Ekstra gebyrer kan oppstå, utover de som er opplyst på denne siden. Dersom du har endringsforslag eller ny informasjon kan du sende en mail til (insert e-mail). Denne siden er sponset av Clearhaus.com."
+  },
+  "cards": {
+    "visa": "Visa/MasterCard",
+    "maestro": "Maestro",
+    "jcb": "JCB",
+    "amex": "American Express"
+  },
+  "features": {
+    "FraudControl": "Svindelkontroll",
+    "RecurringPayments": "Abonnementsbetalinger"
+  },
+  "keywords": {
+    "betalingsløsninger": "betalingsløsninger",
+    "betalingsløsning": "betalingsløsning",
+    "online betalingsløsninger": "online betalingsløsninger",
+    "online betalingsløsning": "online betalingsløsning",
+    "nettbetalingsløsninger": "nettbetalingsløsninger",
+    "nettbetaling": "nettbetaling",
+    "kortgebyr": "kortgebyr",
+    "betalingsgateway": "betalingsgateway ",
+    "nets priser": "nets priser",
+    "clearhaus priser": "clearhaus priser",
+    "swedbank priser": "swedbank priser",
+    "stripe priser": "stripe priser",
+    "nettbutikk betalingsløsning": "nettbutikk betalingsløsning",
+    "innløsning": "innløsning",
+    "visa kortgebyr": "visa kortgebyr",
+    "mastercard": "mastercard kortgebyr",
+    "online betaling": "online betaling",
+    "nets norge": "nets norge",
+    "clearhaus norge": "clearhaus norge",
+    "gebyrsammenligning": "gebyrsammenligning",
+    "innløsningsavtale": "innløsningsavtale",
+    "innløser priser": "innløser priser",
+    "innløsningsavtale priser": "innløsningsavtale priser",
+    "nets innløsningsavtale pris": "nets innløsningsavtale pris",
+    "bambora norge": "bambora norge",
+    "bambora priser": "bambora priser",
+    "prissammenligning nettbetaling": "prissammenligning nettbetaling",
+    "pensopay priser": "pensopay priser",
+    "dibs priser": "dibs priser",
+    "quickpay priser": "quickpay priser",
+    "paypal priser": "paypal priser",
+    "paypal nettbetaling": "paypal nettbetaling",
+    "epay nettbetaling": "epay nettbetaling"
+  },
+  "priceColumn":{
+    "unknown_price": "ukjent*"
+  }
+}

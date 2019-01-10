@@ -22,7 +22,7 @@ function settings(o) {
     $revenue = $avgvalue.scale($qty);
     $acqs = (o.acquirer === 'auto') ? ACQs.slice() : (country === false)
         ? [ACQs[0], ACQs[o.acquirer]] : [ACQs[o.acquirer-1]];
-    // $('#menu-control').css("top",0);
+
 
     if (!o.cards.visa) {
         // disableCards(['diners', 'jcb', 'amex']);
@@ -156,9 +156,9 @@ function build(action) {
     psploop:
     for (let i = 0; i < PSPs.length; i++) {
         const psp = PSPs[i];
+        var mail = psp.contactMail;
         const fees = { setup: {}, monthly: {}, trn: {} };
         cost2obj(psp.fees, fees, psp.name);
-
         // Check if psp support all enabled payment methods
         for (const card in opts.cards) {
             if (!psp.cards[card]) { continue psploop; }
@@ -192,7 +192,6 @@ function build(action) {
                 const acqlink = document.createElement('a');
                 acqlink.href = acq.link;
                 acqlink.className = 'acq';
-
                 const acqlogo = new Image();
                 acqlogo.src = './img/psp/' + acq.logo;
                 acqlogo.alt = acq.name;
@@ -214,7 +213,6 @@ function build(action) {
             acqtext.textContent = included;
             acqfrag.appendChild(acqtext);
         }
-
         const cardfrag = document.createDocumentFragment();
         for (const card in psp.cards) {
             if (psp.acquirers && !acqcards[card]) { continue; }
@@ -245,6 +243,9 @@ function build(action) {
         const pspfrag = document.createDocumentFragment();
         const psplink = document.createElement('a');
         const pspPackage = document.createElement('a');
+        const mailfrag = document.createElement('p');
+        mailfrag.className = "mail_link";
+        mailfrag.innerHTML = mail;
         psplink.target = '_blank';
         psplink.href = psp.link;
         psplink.className = 'psp';
@@ -258,7 +259,6 @@ function build(action) {
         pspname.textContent = psp.name;
         link_ref.textContent = psp.name;
         psplink.appendChild(psplogo);
-        // psplink.appendChild(pspname); //this is the text beneath the logo. this is the reference to the package name
         pspPackage.appendChild(link_ref);
         pspfrag.appendChild(psplink);
 
@@ -278,7 +278,6 @@ function build(action) {
         }
         p1.className = 'procent';
         cardfeefrag.appendChild(p1);
-
         const tr = document.createElement('tr');
         tr.insertCell(-1).appendChild(pspfrag);
         tr.insertCell(-1).appendChild(pspPackage);
@@ -289,6 +288,7 @@ function build(action) {
         tr.insertCell(-1).appendChild(sumTxt(fees.trn));
         tr.insertCell(-1).appendChild(sumTxt(totals));
         tr.insertCell(-1).appendChild(cardfeefrag);
+        tr.insertCell(-1).appendChild(mailfrag);
         frag.insertBefore(tr, frag.childNodes[sort]);
     }
     const tbody = document.getElementById('tbody');

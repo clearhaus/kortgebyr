@@ -6,7 +6,7 @@ $.getJSON("./js/languages/"+ country_code.toLowerCase() + ".json",function(json)
 }).then((respons) => {
   data = respons;
   var side = (window.location.href);
-  if(!side.includes("about.html")){
+  if(!side.includes("contact.html")){
     insertDataIntoFields(data.translations);
     loadFeatures(data.features);
     loadCardData(data.cards);
@@ -15,7 +15,8 @@ $.getJSON("./js/languages/"+ country_code.toLowerCase() + ".json",function(json)
     loadPrice(data.priceColumn);
   }
   else{
-    loadFAQ(data.About_site);
+    // loadFAQ(data.About_site);
+    loadContact(data.translations);
   }
 });
 
@@ -162,6 +163,16 @@ function loadPrice(data){
   }
 }
 
+function loadContact(data){
+  for(key in data){
+    if(key === "title-header"){
+      document.getElementById(key).innerHTML = data[key];
+    }
+    else if (key === "sub-title") {
+      document.getElementById(key).innerHTML = data[key];
+    }
+  }
+}
 
 // Temporary solution: convert arrays to objects
 (() => {

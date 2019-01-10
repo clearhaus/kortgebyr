@@ -16,6 +16,7 @@
     "transactions_fees": "Transaksjonsgebyr",
     "total_per_month": "Totalt per måned",
     "total_per_transaction": "Totalt per transaksjon",
+    "contact_mail": "Kontakt",
     "title-header": "Nettbetalingsløsninger.no",
     "sub-title": "Din guide for å velge en optimal betalingstjeneste for din butikk"
   },
@@ -55,7 +56,8 @@
     "visa": "Visa/MasterCard",
     "maestro": "Maestro",
     "jcb": "JCB",
-    "amex": "American Express"
+    "amex": "American Express",
+    "vipps": "Vipps"
   },
   "features": {
     "FraudControl": "Svindelkontroll",

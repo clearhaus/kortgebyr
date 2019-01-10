@@ -1,6 +1,10 @@
 const country_code = "NO";
 const country_currency = "NOK";
 
+const Vipps = {
+  title: 'vipps',
+  monthly: new Currency(50, 'NOK')
+}
 
 const ACQs = [
     {
@@ -19,7 +23,8 @@ const ACQs = [
       name: 'Nets',
       logo: 'nets.svg',
       link: 'https://www.nets.eu/no/payments/nettbetaling/',
-      cards: ['visa', 'mastercard', 'jcb','amex'],
+      cards: ['visa', 'mastercard', 'jcb','amex','vipps'],
+      contact: 'test.com',
       fees: {
           setup(o){
             return new Currency(Infinity, 'NOK');
@@ -64,7 +69,7 @@ const PSPs = [
         name: 'Standard',
         logo: 'dibs.svg',
         link: 'https://www.dibs.no/betalingslosninger',
-        cards: ['visa', 'mastercard', 'jcb'],
+        cards: ['visa', 'mastercard', 'jcb','vipps'],
         acqs: ['Nets'],
         features: ['RecurringPayments','FraudControl'],
         fees: {
@@ -156,9 +161,10 @@ const PSPs = [
         }
     },
     {
-        name: 'Basis',
+        name: 'Basic',
         logo: 'pensopay.svg',
         link: 'https://pensopay.com/nb/',
+        contactMail: 'support@mail.no',
         cards: ['visa', 'mastercard', 'maestro'],
         features: [
           {

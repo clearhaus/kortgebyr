@@ -10,7 +10,15 @@ input[type=number] {
 .title-section{
   display: inline-flex;
 }
-
+.about-title-section{
+  margin-left: 10px;
+}
+.booking-meeting{
+    margin-left: 16px;
+}
+#back-button{
+  margin-left: 20px;
+}
 #selectedCountry{
   width: auto;
   height: 29px;
@@ -19,6 +27,20 @@ input[type=number] {
 
 .container {
     margin-left: 0;
+}
+.contact-header{
+  font-family: Oswald;
+}
+.book-meeting{
+  display: inline-flex;
+  margin-left: 10px;
+  p{
+    margin-top: 7px;
+    margin-right: 10px;
+  }
+}
+.sub-header{
+  margin-left: 20px;
 }
 #title-header{
   font-family: Oswald;
@@ -29,6 +51,9 @@ input[type=number] {
   font-style: italic;
   margin-top: 42px;
   margin-left: 10px;
+}
+.sub-title-contact{
+  margin-top: 26px !important;
 }
 .transaction-information {
   display: flex;
@@ -135,8 +160,9 @@ nav {
     line-height: 42px;
     background: #f5f5f5;
 }
-
-
+#embeeded-hubspot{
+  max-width: 781px;
+}
 .center-content {
   display: table;
   margin-left: auto;

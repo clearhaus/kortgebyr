@@ -37,10 +37,22 @@ function insertGoogleAnalytics(){
   xhttp.open("GET","./google_analytics_" + country_code.toLowerCase() + ".html",true);
   xhttp.send();
 }
+function loadiframe() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      document.querySelector('#embeeded-hubspot').innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET","./iframe.html",true);
+  xhttp.send();
+}
 
   window.onload = function() {
-    Promise.all([loadTable(),loadAbout(),insertGoogleAnalytics()]).then(function(){
-      updateCurrency().then(() => build());
-      windowScroll();
-    });
+    if (!window.location.href.includes("/contact.html")) {
+      Promise.all([loadTable(),loadAbout(),insertGoogleAnalytics()]).then(function(){
+        updateCurrency().then(() => build());
+        windowScroll();
+      });
+    }
   }

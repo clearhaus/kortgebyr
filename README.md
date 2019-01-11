@@ -6,7 +6,7 @@ This project is a modified multi-language version of https://github.com/ulrikmoe
 To build it locally, you will need [Node.js](https://nodejs.org/en/) and [Gulp 4](http://gulpjs.com).
 
 ```bash
-git clone
+git clone https://github.com/clearhaus/kortgebyr
 cd kortgebyr
 docker run --rm -it --net=host -v $PWD:/web -w /web node:8.1 bash
 npm i

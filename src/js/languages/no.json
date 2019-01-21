@@ -58,8 +58,8 @@
     "visa": "Visa/MasterCard",
     "maestro": "Maestro",
     "jcb": "JCB",
-    "amex": "American Express",
-    "vipps": "Vipps"
+    "amex": "American Express"
+
   },
   "features": {
     "FraudControl": "Svindelkontroll",

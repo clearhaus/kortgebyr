@@ -122,7 +122,7 @@ function sumTxt(obj) {
     const frag = document.createDocumentFragment();
     frag.textContent = sum(obj).print($currency);
     if(frag.textContent.startsWith("In.fin.ity,undefined") || frag.textContent.startsWith("NaN") ){
-      frag.textContent = unknown_price;
+      frag.textContent = unknown_price+"*";
     }
     else if (Object.keys(obj).length) {
         const info = document.createElement('div');

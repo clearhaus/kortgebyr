@@ -26,17 +26,7 @@ function loadAbout(){
   xhttp.send();
 }
 
-function insertGoogleAnalytics(){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function(){
-    if(this.readyState == 4 && this.status == 200){
-      document.querySelector('#google-script').innerHTML = this.responseText;
-      loadFAQ(data.About_site);
-    }
-  };
-  xhttp.open("GET","./google_analytics_" + country_code.toLowerCase() + ".html",true);
-  xhttp.send();
-}
+´
 function loadiframe() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function(){
@@ -50,7 +40,7 @@ function loadiframe() {
 
   window.onload = function() {
     if (!window.location.href.includes("/contact.html")) {
-      Promise.all([loadTable(),loadAbout(),insertGoogleAnalytics()]).then(function(){
+      Promise.all([loadTable(),loadAbout()]).then(function(){
         updateCurrency().then(() => build());
         windowScroll();
       });

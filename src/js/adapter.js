@@ -6,7 +6,7 @@ $.getJSON("./js/languages/"+ country_code.toLowerCase() + ".json",function(json)
 }).then((respons) => {
   data = respons;
   var side = (window.location.href);
-  if(!side.includes("contact.html")){
+  if(!side.includes("meeting.html")){
     insertDataIntoFields(data.translations);
     loadFeatures(data.features);
     loadCardData(data.cards);
@@ -15,8 +15,9 @@ $.getJSON("./js/languages/"+ country_code.toLowerCase() + ".json",function(json)
     loadPrice(data.priceColumn);
   }
   else{
-    // loadFAQ(data.About_site);
     loadContact(data.translations);
+    loadMeeting(data.booking_meeting);
+    loadKeywords(data.keywords);
   }
 });
 
@@ -44,10 +45,6 @@ function insertDataIntoFields(data){
               selectOptions.add(option);
             }
           }
-
-
-
-
         }
         else if(key == "included"){
           included = data[key];
@@ -171,6 +168,12 @@ function loadContact(data){
     else if (key === "sub-title") {
       document.getElementById(key).innerHTML = data[key];
     }
+  }
+}
+
+function loadMeeting(data){
+  for(key in data){
+    document.getElementById(key).innerHTML = data[key];
   }
 }
 

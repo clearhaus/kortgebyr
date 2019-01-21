@@ -18,7 +18,9 @@
     "total_per_transaction": "Totalt per transaksjon",
     "contact_mail": "Kontakt",
     "title-header": "Nettbetalingsløsninger.no",
-    "sub-title": "Din guide for å velge en optimal betalingstjeneste for din butikk"
+    "sub-title": "Din guide for å velge en optimal betalingstjeneste for din butikk",
+    "meeting-text": "Har du spørsmål? Book en gratis konsultasjon med oss.",
+    "btn-meeting": "Book møte"
   },
   "About_site":{
     "explanation": "Hva er nettbetalingsløsninger.no?",
@@ -98,7 +100,12 @@
     "paypal nettbetaling": "paypal nettbetaling",
     "epay nettbetaling": "epay nettbetaling"
   },
+  "booking_meeting":{
+    "book_a_meeting_title": "Book møte",
+    "book_a_meeting_explaining_text": "Universet “online betalinger” kan være litt forvirrende, og dersom du er ny, har du kanskje noen spørsmål angående hvordan ting fungerer.",
+    "clearhaus_text": "Clearhaus er glad for å hjelpe og veilede deg. Book gjerne et møte med oss!"
+  },
   "priceColumn":{
-    "unknown_price": "ukjent*"
+    "unknown_price": "ukjent"
   }
 }

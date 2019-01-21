@@ -387,6 +387,11 @@ td {
     text-align: left;
 }
 
+.contact_mail{
+  width: 200px;
+  text-align: center;
+}
+
 .psp {
     display: block;
     font-size: 13px;
@@ -446,7 +451,9 @@ td {
         display: block;
     }
 }
-
+#book_a_meeting_title{
+  margin-top: 20px;
+}
 .acq {
     line-height: 23px;
 }

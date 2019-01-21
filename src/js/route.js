@@ -26,20 +26,9 @@ function loadAbout(){
   xhttp.send();
 }
 
-´
-function loadiframe() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function(){
-    if(this.readyState == 4 && this.status == 200){
-      document.querySelector('#embeeded-hubspot').innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET","./iframe.html",true);
-  xhttp.send();
-}
 
   window.onload = function() {
-    if (!window.location.href.includes("/contact.html")) {
+    if (!window.location.href.includes("/meeting.html")) {
       Promise.all([loadTable(),loadAbout()]).then(function(){
         updateCurrency().then(() => build());
         windowScroll();

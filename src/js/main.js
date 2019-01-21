@@ -157,6 +157,9 @@ function build(action) {
     for (let i = 0; i < PSPs.length; i++) {
         const psp = PSPs[i];
         var mail = psp.contactMail;
+        if(!mail){
+          mail = unknown_price;
+        }
         const fees = { setup: {}, monthly: {}, trn: {} };
         cost2obj(psp.fees, fees, psp.name);
         // Check if psp support all enabled payment methods
@@ -173,7 +176,11 @@ function build(action) {
 
         // If an acquirer has been selected then hide the Stripes
         if ($acqs.length < 3 && !psp.acquirers) { continue; }
-
+        const divmailfrag = document.createElement('div');
+        const mailfrag = document.createElement('p');
+        mailfrag.className = "mail_link";
+        mailfrag.innerHTML = mail;
+        divmailfrag.appendChild(mailfrag);
         const acqfrag = document.createDocumentFragment();
         const acqcards = {};
         let acqArr = [];
@@ -183,12 +190,18 @@ function build(action) {
             if (!acqArr) { continue; }
             for (let j = 0; j < acqArr.length; j++) {
                 const acq = acqArr[j];
+                const acq_mail = acq.contactMail;
                 cost2obj({
                     setup: acq.fees.setup,
                     monthly: acq.fees.monthly,
                     trn: acq.trnfees
                 }, fees, acq.name);
-
+                if (acq_mail) {
+                  const acqMailFrag = document.createElement('p');
+                  acqMailFrag.className = 'mail_link';
+                  acqMailFrag.innerHTML = acq_mail;
+                  divmailfrag.appendChild(acqMailFrag);
+                }
                 const acqlink = document.createElement('a');
                 acqlink.href = acq.link;
                 acqlink.className = 'acq';
@@ -241,11 +254,10 @@ function build(action) {
 
         // Create PSP logo.
         const pspfrag = document.createDocumentFragment();
+        const mailfragment = document.createDocumentFragment();
         const psplink = document.createElement('a');
         const pspPackage = document.createElement('a');
-        const mailfrag = document.createElement('p');
-        mailfrag.className = "mail_link";
-        mailfrag.innerHTML = mail;
+
         psplink.target = '_blank';
         psplink.href = psp.link;
         psplink.className = 'psp';
@@ -262,6 +274,8 @@ function build(action) {
         pspPackage.appendChild(link_ref);
         pspfrag.appendChild(psplink);
 
+        mailfragment.appendChild(divmailfrag);
+
         // cardfee calc.
         const cardfeefrag = document.createDocumentFragment();
         const p1 = document.createElement('p');
@@ -274,7 +288,7 @@ function build(action) {
           p1.textContent = '(' + cardfeepct.replace('.', currency_map[$currency].d) + '%)';
         }
         if (cardfeefrag.textContent.startsWith("In.fin.ity")) {
-          cardfeefrag.textContent = unknown_price;
+          cardfeefrag.textContent = unknown_price+"*";
         }
         p1.className = 'procent';
         cardfeefrag.appendChild(p1);
@@ -288,7 +302,7 @@ function build(action) {
         tr.insertCell(-1).appendChild(sumTxt(fees.trn));
         tr.insertCell(-1).appendChild(sumTxt(totals));
         tr.insertCell(-1).appendChild(cardfeefrag);
-        tr.insertCell(-1).appendChild(mailfrag);
+        tr.insertCell(-1).appendChild(mailfragment);
         frag.insertBefore(tr, frag.childNodes[sort]);
     }
     const tbody = document.getElementById('tbody');

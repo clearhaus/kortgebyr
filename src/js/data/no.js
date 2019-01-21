@@ -11,6 +11,7 @@ const ACQs = [
         name: 'Bambora',
         logo: 'bambora.svg',
         link: 'https://www.bambora.com/no/no/',
+        contactMail: 'support@bambora.com',
         cards: ['visa', 'mastercard', 'maestro'],
         fees: {
             monthly: new Currency(245,'NOK'),
@@ -23,8 +24,8 @@ const ACQs = [
       name: 'Nets',
       logo: 'nets.svg',
       link: 'https://www.nets.eu/no/payments/nettbetaling/',
-      cards: ['visa', 'mastercard', 'jcb','amex','vipps'],
-      contact: 'test.com',
+      cards: ['visa', 'mastercard', 'jcb','amex'],
+      contactMail: 'kundeservice-no@nets.eu',
       fees: {
           setup(o){
             return new Currency(Infinity, 'NOK');
@@ -41,6 +42,7 @@ const ACQs = [
         name: 'Clearhaus',
         logo: 'clearhaus.svg',
         link: 'https://www.clearhaus.com/no/',
+        contactMail: 'hello@clearhaus.com',
         cards: ['visa', 'mastercard', 'maestro'],
         fees: {
             trn() {
@@ -52,6 +54,7 @@ const ACQs = [
         name: 'Swedbank',
         logo: 'swedbank.svg',
         link: 'https://www.swedbank.no/bedrift/kortinnl%C3%B8sning-og-terminaler/',
+        contactMail: 'cardservices@swedbank.no',
         cards: ['visa', 'mastercard', 'maestro'],
         fees: {
             trn() {
@@ -69,7 +72,8 @@ const PSPs = [
         name: 'Standard',
         logo: 'dibs.svg',
         link: 'https://www.dibs.no/betalingslosninger',
-        cards: ['visa', 'mastercard', 'jcb','vipps'],
+        contactMail: 'salg@dibs.no',
+        cards: ['visa', 'mastercard', 'jcb'],
         acqs: ['Nets'],
         features: ['RecurringPayments','FraudControl'],
         fees: {
@@ -86,6 +90,7 @@ const PSPs = [
         name: 'Small',
         logo: 'payex.svg',
         link: 'https://payex.no/',
+        contactMail: 'salg@payex.com',
         cards: ['visa', 'mastercard', 'maestro','amex','jcb', 'diners'],
         features: [],
         fees: {
@@ -101,6 +106,7 @@ const PSPs = [
         name: 'Standard',
         logo: 'payex.svg',
         link: 'https://payex.no/',
+        contactMail: 'salg@payex.com',
         cards: ['visa', 'mastercard', 'maestro','amex','jcb','diners'],
         features: ['FraudControl'],
         fees: {
@@ -116,6 +122,7 @@ const PSPs = [
         name: 'Standard',
         logo: 'paylike.svg',
         link: 'https://no.paylike.io/',
+        contactMail: 'hello@paylike.io',
         cards: ['visa', 'mastercard', 'maestro'],
         features: [],
         fees: {
@@ -128,6 +135,7 @@ const PSPs = [
       name: 'Online',
       logo: 'bambora.svg',
       link: 'https://www.bambora.com/no/no/',
+      contactMail: 'support@bambora.com',
       cards: ['visa', 'mastercard','maestro'],
       features: ['RecurringPayments','FraudControl'],
       acqs: ['Bambora','Nets','Swedbank'],
@@ -164,7 +172,7 @@ const PSPs = [
         name: 'Basic',
         logo: 'pensopay.svg',
         link: 'https://pensopay.com/nb/',
-        contactMail: 'support@mail.no',
+        contactMail: 'support@pensopay.com',
         cards: ['visa', 'mastercard', 'maestro'],
         features: [
           {
@@ -189,6 +197,7 @@ const PSPs = [
         name: 'Start Up',
         logo: 'pensopay.svg',
         link: 'https://pensopay.com/nb/',
+        contactMail: 'support@pensopay.com',
         cards: ['visa', 'mastercard', 'maestro'],
         features: [
           {
@@ -214,6 +223,7 @@ const PSPs = [
         name: 'Business',
         logo: 'pensopay.svg',
         link: 'https://pensopay.com/nb/',
+        contactMail: 'support@pensopay.com',
         cards: ['visa', 'mastercard', 'maestro'],
         features: [
             {
@@ -240,6 +250,7 @@ const PSPs = [
       name: 'Premium',
       logo: 'pensopay.svg',
       link: 'https://pensopay.com/nb/',
+      contactMail: 'support@pensopay.com',
       cards: ['visa', 'mastercard', 'maestro'],
       features: [
           {
@@ -266,6 +277,7 @@ const PSPs = [
       name: 'Pro',
       logo: 'pensopay.svg',
       link: 'https://pensopay.com/nb/',
+      contactMail: 'support@pensopay.com',
       cards: ['visa', 'mastercard', 'maestro'],
       features: [
           {
@@ -292,6 +304,7 @@ const PSPs = [
         name: 'Standard',
         logo: 'stripe.svg',
         link: 'https://stripe.com/no',
+        contactMail: 'info@stripe.com',
         cards: ['visa', 'mastercard', 'amex'],
         features:[''],
         fees: {
@@ -304,6 +317,7 @@ const PSPs = [
         name: 'Basic',
         logo: 'quickpay.svg',
         link: 'https://quickpay.net/no/pricing',
+        contactMail: 'support@quickpay.net',
         acqs: ['Nets','Clearhaus', 'PensoPay', 'Swedbank'],
         cards: ['visa','mastercard','jcb','amex'],
         features: ['FraudControl','RecurringPayments'],
@@ -317,6 +331,7 @@ const PSPs = [
         name: 'Starter',
         logo: 'quickpay.svg',
         link: 'https://quickpay.net/no/pricing',
+        contactMail: 'support@quickpay.net',
         acqs: ['Nets','Clearhaus', 'PensoPay', 'Swedbank'],
         cards: ['visa','mastercard','jcb','amex'],
         features: ['FraudControl','RecurringPayments'],
@@ -331,6 +346,7 @@ const PSPs = [
         name: 'Professional',
         logo: 'quickpay.svg',
         link: 'https://quickpay.net/no/pricing',
+        contactMail: 'support@quickpay.net',
         acqs: ['Nets','Clearhaus', 'PensoPay', 'Swedbank'],
         cards: ['visa','mastercard','jcb','amex'],
         features: [],

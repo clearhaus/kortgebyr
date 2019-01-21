@@ -77,13 +77,13 @@ $ read -s AWS_SECRET_ACCESS_KEY && export AWS_SECRET_ACCESS_KEY
 ## Staging
 Run the following command to push to the staging AWS bucket:
 ```bash
-./node_modules/.bin/s3-deploy './www/**' --cwd './www/' --region {Region name} --bucket {Bucket name} --gzip --etag
+./node_modules/.bin/s3-deploy './www/**' --cwd './www/' --region eu-west-1 --bucket {Bucket name} --gzip --etag
 ```
 
 ## Production
 Run the following command to push to the production AWS bucket:
 ```bash
-./node_modules/.bin/s3-deploy './www/**' --cwd './www/' --region {Region name} --bucket {Bucket name} --gzip --cache 86400 --etag
+./node_modules/.bin/s3-deploy './www/**' --cwd './www/' --region eu-west-1 --bucket {Bucket name} --gzip --cache 86400 --etag
 ```
 
 ## License

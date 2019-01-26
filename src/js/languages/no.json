@@ -58,12 +58,13 @@
     "visa": "Visa/MasterCard",
     "maestro": "Maestro",
     "jcb": "JCB",
-    "amex": "American Express"
-
+    "amex": "American Express",
+    "Apple Pay": "Apple Pay"
   },
   "features": {
     "FraudControl": "Svindelkontroll",
-    "RecurringPayments": "Abonnementsbetalinger"
+    "RecurringPayments": "Abonnementsbetalinger",
+    "vipps": "Vipps"
   },
   "keywords": {
     "betalingsløsninger": "betalingsløsninger",

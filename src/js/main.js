@@ -170,6 +170,7 @@ function build(action) {
         // Check if psp support all enabled features
         for (const i in opts.features) {
             const feature = psp.features[i];
+            console.log(feature);
             if (!feature) { continue psploop; }
             cost2obj(feature, fees, i);
         }
@@ -235,12 +236,22 @@ function build(action) {
                 if (!opts.cards[card]) { continue; }
                 cost2obj(psp.cards[card], fees, card);
             }
-
             const cardicon = new Image(22, 15);
-            cardicon.src = './img/cards/' + card + '.svg?1';
-            cardicon.alt = card;
-            cardicon.className = 'card';
-            cardfrag.appendChild(cardicon);
+            const applePayFrag = document.createElement('div');
+            if(card == 'Apple Pay'){
+              cardicon.src = './img/cards/' + card + '.svg?1';
+              cardicon.alt = card;
+              cardicon.className = 'card';
+              applePayFrag.appendChild(cardicon);
+              cardfrag.appendChild(applePayFrag);
+            }
+
+            else{
+              cardicon.src = './img/cards/' + card + '.svg?1';
+              cardicon.alt = card;
+              cardicon.className = 'card';
+              cardfrag.appendChild(cardicon);
+            }
         }
 
         // Calculate TC and sort psps

@@ -1,10 +1,6 @@
 const country_code = "NO";
 const country_currency = "NOK";
 
-const Vipps = {
-  title: 'vipps',
-  monthly: new Currency(50, 'NOK')
-}
 
 const ACQs = [
     {
@@ -43,7 +39,7 @@ const ACQs = [
         logo: 'clearhaus.svg',
         link: 'https://www.clearhaus.com/no/',
         contactMail: 'hello@clearhaus.com',
-        cards: ['visa', 'mastercard', 'maestro'],
+        cards: ['visa', 'mastercard', 'maestro','Apple Pay'],
         fees: {
             trn() {
                 return $avgvalue.scale(1.45 / 100);
@@ -73,7 +69,7 @@ const PSPs = [
         logo: 'dibs.svg',
         link: 'https://www.dibs.no/betalingslosninger',
         contactMail: 'salg@dibs.no',
-        cards: ['visa', 'mastercard', 'jcb'],
+        cards: ['visa', 'mastercard', 'jcb',{}],
         acqs: ['Nets'],
         features: ['RecurringPayments','FraudControl'],
         fees: {
@@ -123,7 +119,7 @@ const PSPs = [
         logo: 'paylike.svg',
         link: 'https://no.paylike.io/',
         contactMail: 'hello@paylike.io',
-        cards: ['visa', 'mastercard', 'maestro'],
+        cards: ['visa', 'mastercard', 'maestro','Apple Pay'],
         features: [],
         fees: {
             trn() {
@@ -137,7 +133,10 @@ const PSPs = [
       link: 'https://www.bambora.com/no/no/',
       contactMail: 'support@bambora.com',
       cards: ['visa', 'mastercard','maestro'],
-      features: ['RecurringPayments','FraudControl'],
+      features: ['RecurringPayments','FraudControl',{
+        title: 'vipps',
+        monthly: new Currency(49,'NOK')
+      }],
       acqs: ['Bambora','Nets','Swedbank'],
       fees: {
         monthly: new Currency(245,'NOK'),
@@ -173,7 +172,7 @@ const PSPs = [
         logo: 'pensopay.svg',
         link: 'https://pensopay.com/nb/',
         contactMail: 'support@pensopay.com',
-        cards: ['visa', 'mastercard', 'maestro'],
+        cards: ['visa', 'mastercard', 'maestro',{title: 'Apple Pay',monthly: new Currency(65,'NOK')}],
         features: [
           {
             title: 'FraudControl',
@@ -185,7 +184,8 @@ const PSPs = [
           {
               title: 'RecurringPayments',
               monthly: new Currency(79,'NOK')
-          }
+          },
+          'vipps'
         ],
         fees: {
             trn() {
@@ -198,7 +198,7 @@ const PSPs = [
         logo: 'pensopay.svg',
         link: 'https://pensopay.com/nb/',
         contactMail: 'support@pensopay.com',
-        cards: ['visa', 'mastercard', 'maestro'],
+        cards: ['visa', 'mastercard', 'maestro',{title: 'Apple Pay',monthly: new Currency(65,'NOK')}],
         features: [
           {
             title: 'FraudControl',
@@ -210,7 +210,8 @@ const PSPs = [
           {
               title: 'RecurringPayments',
               monthly: new Currency(79,'NOK')
-          }
+          },
+          'vipps'
         ],
         fees: {
           monthly: new Currency(79,'NOK'),
@@ -224,7 +225,7 @@ const PSPs = [
         logo: 'pensopay.svg',
         link: 'https://pensopay.com/nb/',
         contactMail: 'support@pensopay.com',
-        cards: ['visa', 'mastercard', 'maestro'],
+        cards: ['visa', 'mastercard', 'maestro',{title: 'Apple Pay',monthly: new Currency(65,'NOK')}],
         features: [
             {
               title: 'FraudControl',
@@ -236,7 +237,8 @@ const PSPs = [
             {
                 title: 'RecurringPayments',
                 monthly: new Currency(79,'NOK')
-            }
+            },
+            'vipps'
         ],
         fees: {
           monthly: new Currency(139,'NOK'),
@@ -251,7 +253,7 @@ const PSPs = [
       logo: 'pensopay.svg',
       link: 'https://pensopay.com/nb/',
       contactMail: 'support@pensopay.com',
-      cards: ['visa', 'mastercard', 'maestro'],
+      cards: ['visa', 'mastercard', 'maestro',{title: 'Apple Pay',monthly: new Currency(65,'NOK')}],
       features: [
           {
             title: 'FraudControl',
@@ -263,7 +265,8 @@ const PSPs = [
           {
               title: 'RecurringPayments',
               monthly: new Currency(79,'NOK')
-          }
+          },
+          'vipps'
       ],
       fees: {
         monthly: new Currency(179,'NOK'),
@@ -278,7 +281,7 @@ const PSPs = [
       logo: 'pensopay.svg',
       link: 'https://pensopay.com/nb/',
       contactMail: 'support@pensopay.com',
-      cards: ['visa', 'mastercard', 'maestro'],
+      cards: ['visa', 'mastercard', 'maestro',{title: 'Apple Pay',monthly: new Currency(65,'NOK')}],
       features: [
           {
             title: 'FraudControl',
@@ -290,7 +293,8 @@ const PSPs = [
           {
               title: 'RecurringPayments',
               monthly: new Currency(79,'NOK')
-          }
+          },
+          'vipps'
       ],
       fees: {
         monthly: new Currency(199,'NOK'),
@@ -305,7 +309,7 @@ const PSPs = [
         logo: 'stripe.svg',
         link: 'https://stripe.com/no',
         contactMail: 'info@stripe.com',
-        cards: ['visa', 'mastercard', 'amex'],
+        cards: ['visa', 'mastercard', 'amex','Apple Pay'],
         features:[''],
         fees: {
             trn() {
@@ -319,8 +323,8 @@ const PSPs = [
         link: 'https://quickpay.net/no/pricing',
         contactMail: 'support@quickpay.net',
         acqs: ['Nets','Clearhaus', 'PensoPay', 'Swedbank'],
-        cards: ['visa','mastercard','jcb','amex'],
-        features: ['FraudControl','RecurringPayments'],
+        cards: ['visa','mastercard','jcb','amex',{title: 'Apple Pay',monthly: new Currency(59,'NOK')}],
+        features: ['FraudControl','RecurringPayments','vipps'],
         fees: {
             trn() {
               return new Currency(7.5 * $qty, 'NOK');
@@ -333,8 +337,8 @@ const PSPs = [
         link: 'https://quickpay.net/no/pricing',
         contactMail: 'support@quickpay.net',
         acqs: ['Nets','Clearhaus', 'PensoPay', 'Swedbank'],
-        cards: ['visa','mastercard','jcb','amex'],
-        features: ['FraudControl','RecurringPayments'],
+        cards: ['visa','mastercard','jcb','amex',{title: 'Apple Pay',monthly: new Currency(59,'NOK')}],
+        features: ['FraudControl','RecurringPayments','vipps'],
         fees: {
             monthly: new Currency(99, 'NOK'),
             trn() {
@@ -348,8 +352,8 @@ const PSPs = [
         link: 'https://quickpay.net/no/pricing',
         contactMail: 'support@quickpay.net',
         acqs: ['Nets','Clearhaus', 'PensoPay', 'Swedbank'],
-        cards: ['visa','mastercard','jcb','amex'],
-        features: [],
+        cards: ['visa','mastercard','jcb','amex',{title: 'Apple Pay',monthly: new Currency(59,'NOK')}],
+        features: ['vipps'],
         fees: {
             monthly: new Currency(199, 'NOK'),
             trn() {

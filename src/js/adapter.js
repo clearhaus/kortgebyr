@@ -8,8 +8,8 @@ $.getJSON("./js/languages/"+ country_code.toLowerCase() + ".json",function(json)
   var side = (window.location.href);
   if(!side.includes("meeting.html")){
     insertDataIntoFields(data.translations);
-    loadFeatures(data.features);
     loadCardData(data.cards);
+    loadFeatures(data.features);
     loadKeywords(data.keywords);
     loadDescription(data.index_description);
     loadPrice(data.priceColumn);
@@ -72,6 +72,7 @@ function insertDataIntoFields(data){
 function loadFeatures(data){
   try {
     var features_checkbox = document.getElementById('features_checkbox');
+    var labels_div = document.getElementById('cardInformation');
     for(key in data){
       var label = document.createElement('label');
       label_text = document.createTextNode(data[key]);
@@ -84,7 +85,13 @@ function loadFeatures(data){
       input.name = 'features[]';
       label.appendChild(input);
       label.appendChild(label_text);
-      features_checkbox.appendChild(label);
+      if(key != 'vipps'){
+        features_checkbox.appendChild(label);
+      }
+      else {
+        labels_div.appendChild(label);
+      }
+
     }
   } catch (e) {
 

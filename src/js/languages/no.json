@@ -1,10 +1,10 @@
 {
   "translations": {
-    "transaction_information": "Transaksjons information",
+    "transaction_information": "Transaksjonsinformasjon",
     "cheapest_solution": "Billigste løsning",
     "transaction_per_month": "Transaksjoner pr. måned",
     "avg_order_value": "Gjennomsnittlig ordreverdi",
-    "card_types": "Korttyper",
+    "card_types": "Betalingsmåter",
     "included": "Inkludert",
     "payment_solution": "Betalingsløsning",
     "package_solution": "Pakkeløsning",
@@ -44,7 +44,8 @@
     "faq-text-17": "På samme måte som det ikke finnes en innløser som passer til alle, finnes det ikke en gateway som passer til alle butikker. Det er noen aspekt du bør ta til etterretning, utenom pris, før du velger en gateway: hvilke valuta vil du tilby transaksjoner i, korttyper gatewayen aksepterer, verktøyer for å forhindre svindel og kundeservicen gatewayen tilbyr.",
     "faq-text-18": "Ekstra gebyrer kan oppstå, utover de som er opplyst på denne siden. Dersom du har endringsforslag eller ny informasjon kan du sende en mail til nettbetalingsløsninger@clearhaus.com.",
     "sponsor-clearhaus": "Denne siden er sponset av Clearhaus.com",
-    "faq-text-19": "*Prisene til DIBS/Nets er individuelle for hver enkelt kunde, og det ligger ikke ute noe prisestimat vi kan benytte."
+    "faq-text-19": "*Prisene til DIBS/Nets er individuelle for hver enkelt kunde, og det ligger ikke ute noe prisestimat vi kan benytte.",
+    "faq-text-20": "Vi tar ikke ansvar for at prisene er riktige."
   },
   "index_description":{
     "description": "Nettbetalingsløsninger er en sammenligningsside for kortgebyr. Vi vil gi deg en best mulig oversikt slik at du kan velge den nettbetalingsløsningen som passer deg best.",

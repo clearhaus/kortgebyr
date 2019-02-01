@@ -156,6 +156,10 @@ function build(action) {
     psploop:
     for (let i = 0; i < PSPs.length; i++) {
         const psp = PSPs[i];
+        var hasVipps;
+        if(psp.features.vipps){
+            hasVipps = "Vipps";
+        }
         var mail = psp.contactMail;
         if(!mail){
           mail = unknown_price;
@@ -170,7 +174,6 @@ function build(action) {
         // Check if psp support all enabled features
         for (const i in opts.features) {
             const feature = psp.features[i];
-            console.log(feature);
             if (!feature) { continue psploop; }
             cost2obj(feature, fees, i);
         }
@@ -228,6 +231,8 @@ function build(action) {
             acqfrag.appendChild(acqtext);
         }
         const cardfrag = document.createDocumentFragment();
+        const cardTextFrag = document.createElement('div');
+        var insertedOnce = true;
         for (const card in psp.cards) {
             if (psp.acquirers && !acqcards[card]) { continue; }
 
@@ -237,13 +242,11 @@ function build(action) {
                 cost2obj(psp.cards[card], fees, card);
             }
             const cardicon = new Image(22, 15);
-            const applePayFrag = document.createElement('div');
             if(card == 'Apple Pay'){
-              cardicon.src = './img/cards/' + card + '.svg?1';
-              cardicon.alt = card;
-              cardicon.className = 'card';
-              applePayFrag.appendChild(cardicon);
-              cardfrag.appendChild(applePayFrag);
+              const fragText = document.createElement('p');
+              fragText.innerHTML = card;
+              cardTextFrag.appendChild(fragText);
+              cardfrag.appendChild(cardTextFrag);
             }
 
             else{
@@ -253,6 +256,14 @@ function build(action) {
               cardfrag.appendChild(cardicon);
             }
         }
+        if(hasVipps == 'Vipps' && insertedOnce){
+          const fragText = document.createElement('p');
+          fragText.innerHTML = 'Vipps';
+          cardTextFrag.appendChild(fragText);
+          cardfrag.appendChild(cardTextFrag);
+          insertedOnce = false;
+        }
+
 
         // Calculate TC and sort psps
         const totals = merge(fees.monthly, fees.trn);
@@ -301,6 +312,7 @@ function build(action) {
         if (cardfeefrag.textContent.startsWith("In.fin.ity")) {
           cardfeefrag.textContent = unknown_price+"*";
         }
+
         p1.className = 'procent';
         cardfeefrag.appendChild(p1);
         const tr = document.createElement('tr');

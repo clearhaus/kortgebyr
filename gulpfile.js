@@ -80,7 +80,7 @@ gulp.task('sitemap', (cb) => {
 });
 
 gulp.task('serve', () => {
-    connect.server({ root: 'www', livereload: true});
+    connect.server({ root: 'www', livereload: true, port: env.port || 8080});
     gulp.watch(['src/img/**', 'src/font/*'], assets);
     gulp.watch(['src/*.html'], html);
     gulp.watch(['src/css/*.scss'], gulp.series(css));

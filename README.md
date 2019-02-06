@@ -15,6 +15,10 @@ run the project with e.g. 'Norway information' use Norways abbreviation 'no'.
 ```bash
 ./node_modules/.bin/gulp --option no
 ```
+To run the project on a specific port
+```bash
+./node_modules/.bin/gulp --option no --port {port number}
+```
 
 ## Adding countries
 

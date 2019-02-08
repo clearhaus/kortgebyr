@@ -76,10 +76,18 @@ src="https://www.facebook.com/tr?id=220251138916896&ev=PageView
     <div class="row">
       <div id="embeeded-hubspot" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="booking-meeting">
-          <!-- Start of Meetings Embed Script -->
-          <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/jakob5?embed=true"></div>
-          <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-          <!-- End of Meetings Embed Script -->
+          <!-- Start of Meetings Embed Form Script -->
+          <!--[if lte IE 8]>
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+          <![endif]-->
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+          <script>
+            hbspt.forms.create({
+              portalId: "4315346",
+              formId: "fd3cc056-77f1-4200-93d6-ab9d9a22c0ce"
+            });
+          </script>
+          <!-- End of Meetings Embed Form Script -->
           <button type="button" class="btn btn-secondary" name="button" onclick="close_window()">Tilbake</button>
         </div>
 
@@ -97,5 +105,8 @@ src="https://www.facebook.com/tr?id=220251138916896&ev=PageView
 
 
       </script>
+      <!-- Start of HubSpot Embed Code -->
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4315346.js"></script>
+      <!-- End of HubSpot Embed Code -->
   </body>
 </html>

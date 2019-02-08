@@ -213,7 +213,7 @@ function build(action) {
                 acqlogo.src = './img/psp/' + acq.logo;
                 acqlogo.alt = acq.name;
                 //do to a large logo this logo will be downscaled in the css file
-                if(acq.name == "PensoPay" || acq.name == "Swedbank"){
+                if(acq.name == "PensoPay" || acq.name == "Swedbank" || acq.name == 'Clearhaus'){
                   acqlogo.className = "acq-logo";
                 }
 
@@ -236,11 +236,6 @@ function build(action) {
         for (const card in psp.cards) {
             if (psp.acquirers && !acqcards[card]) { continue; }
 
-            //  Some cards/methods (e.g. mobilepay) add extra costs.
-            if (typeof psp.cards[card] === 'object') {
-                if (!opts.cards[card]) { continue; }
-                cost2obj(psp.cards[card], fees, card);
-            }
             const cardicon = new Image(22, 15);
             if(card == 'Apple Pay'){
               const fragText = document.createElement('p');
@@ -248,8 +243,13 @@ function build(action) {
               cardTextFrag.appendChild(fragText);
               cardfrag.appendChild(cardTextFrag);
             }
+            //  Some cards/methods (e.g. mobilepay) add extra costs.
+            if (typeof psp.cards[card] === 'object') {
+                if (!opts.cards[card]) { continue; }
+                cost2obj(psp.cards[card], fees, card);
+            }
 
-            else{
+            else if (card != 'Apple Pay'){
               cardicon.src = './img/cards/' + card + '.svg?1';
               cardicon.alt = card;
               cardicon.className = 'card';

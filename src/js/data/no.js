@@ -310,7 +310,7 @@ const PSPs = [
         link: 'https://stripe.com/no',
         contactMail: 'info@stripe.com',
         cards: ['visa', 'mastercard', 'amex','Apple Pay'],
-        features:[''],
+        features:[],
         fees: {
             trn() {
                 return $revenue.scale(2.4 / 100).add(new Currency(2 * $qty,'NOK'));

@@ -8,9 +8,11 @@ To build it locally, you will need [Node.js](https://nodejs.org/en/) and [Gulp 4
 ```bash
 git clone https://github.com/clearhaus/kortgebyr
 cd kortgebyr
-docker run --rm -it --net=host -v $PWD:/web -w /web node:8.1 bash
+docker run --rm -it -p 8080:8080 -v $PWD:/web -w /web node:8.1 bash
 npm i
 ```
+Go to http://127.0.0.1:8080/
+
 run the project with e.g. 'Norway information' use Norways abbreviation 'no'.
 ```bash
 ./node_modules/.bin/gulp --option no

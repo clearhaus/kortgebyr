@@ -42,6 +42,9 @@ function insertDataIntoFields(data){
               var option = document.createElement("option");
               option.text = ACQs[i].name;
               option.value = i + 1;
+              if(i+1 == 3 || i+1 == 4){
+                option.hidden = true;
+              }
               selectOptions.add(option);
             }
           }

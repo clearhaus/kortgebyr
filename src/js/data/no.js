@@ -35,6 +35,40 @@ const ACQs = [
       }
     },
     {
+      name: 'Nets - Netaxept Start',
+      logo: 'nets.svg',
+      link: 'http://nettpilot.no/',
+      cards: ['visa', 'mastercard', 'jcb','amex'],
+      fees: {
+          setup(o){
+            return new Currency(1990, 'NOK');
+          },
+          monthly(o){
+            return new Currency(300, 'NOK');
+          },
+          trn() {
+            return new Currency($qty * 3, 'NOK');
+          }
+      }
+    },
+    {
+      name: 'Nets - Netaxept Advanced',
+      logo: 'nets.svg',
+      link: 'http://nettpilot.no/',
+      cards: ['visa', 'mastercard', 'jcb','amex'],
+      fees: {
+          setup(o){
+            return new Currency(4990, 'NOK');
+          },
+          monthly(o){
+            return new Currency(700, 'NOK');
+          },
+          trn() {
+            return new Currency($qty * 1, 'NOK');
+          }
+      }
+    },
+    {
         name: 'Clearhaus',
         logo: 'clearhaus.svg',
         link: 'https://www.clearhaus.com/no/',
@@ -69,7 +103,7 @@ const PSPs = [
         logo: 'dibs.svg',
         link: 'https://www.dibs.no/betalingslosninger',
         contactMail: 'salg@dibs.no',
-        cards: ['visa', 'mastercard', 'jcb',{}],
+        cards: ['visa', 'mastercard', 'jcb'],
         acqs: ['Nets'],
         features: ['RecurringPayments','FraudControl'],
         fees: {
@@ -81,6 +115,42 @@ const PSPs = [
                 return new Currency(Infinity, 'NOK');
             }
         }
+    },
+    {
+      name: 'Easy',
+      logo: 'dibs.svg',
+      link: 'http://nettpilot.no/',
+      contactMail: 'nettpilot@nettpilot.no',
+      cards: ['visa', 'mastercard', 'jcb'],
+      acqs: ['Nets - Netaxept Start','Nets - Netaxept Advanced'],
+      features: ['RecurringPayments','FraudControl'],
+      fees: {
+          setup: new Currency(2490,'NOK'),
+          monthly(o) {
+            return new Currency(300,'NOK');
+          },
+          trn() {
+              return new Currency(3 * $qty, 'NOK');
+          }
+      }
+    },
+    {
+      name: 'Skreddersydd',
+      logo: 'dibs.svg',
+      link: 'http://nettpilot.no/',
+      contactMail: 'nettpilot@nettpilot.no',
+      cards: ['visa', 'mastercard', 'jcb'],
+      acqs: ['Nets - Netaxept Start','Nets - Netaxept Advanced'],
+      features: ['RecurringPayments','FraudControl'],
+      fees: {
+          setup: new Currency(4990,'NOK'),
+          monthly(o) {
+            return new Currency(690,'NOK');
+          },
+          trn() {
+              return new Currency(1 * $qty, 'NOK');
+          }
+      }
     },
     {
         name: 'Small',
@@ -141,7 +211,7 @@ const PSPs = [
       fees: {
         monthly: new Currency(245,'NOK'),
         trn(){
-          return $revenue.scale(2.45 / 100);
+          return $revenue.scale(1.59 / 100);
         }
       }
 

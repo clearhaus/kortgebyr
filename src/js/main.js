@@ -20,8 +20,14 @@ function settings(o) {
     $qty = o.qty;
     $avgvalue = new Currency(o.avgvalue, o.currency);
     $revenue = $avgvalue.scale($qty);
+
     $acqs = (o.acquirer === 'auto') ? ACQs.slice() : (country === false)
         ? [ACQs[0], ACQs[o.acquirer]] : [ACQs[o.acquirer-1]];
+    if(o.acquirer == '2'){
+      $acqs = [ACQs[1],ACQs[3]];
+    }
+
+
 
 
     if (!o.cards.visa) {

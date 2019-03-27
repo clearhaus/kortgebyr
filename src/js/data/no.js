@@ -7,12 +7,10 @@ const ACQs = [
         name: 'Bambora',
         logo: 'bambora.svg',
         link: 'https://www.bambora.com/no/no/',
-        contactMail: 'support@bambora.com',
         cards: ['visa', 'mastercard', 'maestro'],
         fees: {
-            monthly: new Currency(245,'NOK'),
             trn() {
-                return $avgvalue.scale(1.59 / 100);
+                return new Currency(0,'NOK');
             }
         }
     },
@@ -207,7 +205,7 @@ const PSPs = [
         title: 'vipps',
         monthly: new Currency(49,'NOK')
       }],
-      acqs: ['Bambora','Nets','Swedbank'],
+      acqs: ['Bambora','Nets'],
       fees: {
         monthly: new Currency(245,'NOK'),
         trn(){

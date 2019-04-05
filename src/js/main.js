@@ -1,5 +1,4 @@
 const country = country_code;
-var history = window.History.createBrowserHistory({basename:"./"});
 let opts = {
     acquirer: 'auto',
     currency: country_currency,

@@ -22,6 +22,12 @@ input[type=number] {
     margin-bottom: 20px;
     padding: 20px 20px 10px;
 }
+.logo_of_company{
+  width: 100px;
+}
+.package_solution{
+  width: 105px;
+}
 #back-button{
   margin-left: 20px;
 }
@@ -373,6 +379,7 @@ th {
     border-top: 0;
     color: #444;
     overflow: hidden;
+    width: 100px;
 }
 
 td {
@@ -388,7 +395,7 @@ td {
   margin: 0 15px 0 0;
 }
 .cardsth {
-    width: 150px;
+    width: 160px;
     box-sizing: border-box;
     padding: 0 13px;
 }

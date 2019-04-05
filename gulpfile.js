@@ -21,7 +21,7 @@ function assets() {
 
 function scripts() {
     countryCode = env.option;
-    return gulp.src(['node_modules/history/umd/history.js','node_modules/floatthead/src/jquery.floatThead.js','src/js/data/'+ countryCode +'.js','src/js/adapter.js' ,'src/js/currency.js',
+    return gulp.src(['node_modules/floatthead/src/jquery.floatThead.js','src/js/data/'+ countryCode +'.js','src/js/adapter.js' ,'src/js/currency.js',
         'src/js/tools.js', 'src/js/main.js', 'src/js/route.js'])
         .pipe(through.obj((file, enc, cb) => {
             mo3.render(file, env);

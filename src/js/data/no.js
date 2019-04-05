@@ -201,10 +201,7 @@ const PSPs = [
       link: 'https://www.bambora.com/no/no/',
       contactMail: 'support@bambora.com',
       cards: ['visa', 'mastercard','maestro'],
-      features: ['RecurringPayments','FraudControl',{
-        title: 'vipps',
-        monthly: new Currency(49,'NOK')
-      }],
+      features: ['RecurringPayments','FraudControl','vipps'],
       acqs: ['Bambora','Nets'],
       fees: {
         monthly: new Currency(245,'NOK'),

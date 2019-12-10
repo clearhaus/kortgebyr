@@ -383,47 +383,17 @@ const PSPs = [
         }
     },
     {
-        name: 'Basic',
+        name: 'Merchant',
         logo: 'quickpay.svg',
         link: 'https://quickpay.net/no/pricing',
         contactMail: 'support@quickpay.net',
-        acqs: ['Nets','Clearhaus', 'PensoPay', 'Swedbank'],
-        cards: ['visa','mastercard','jcb','amex',{title: 'Apple Pay',monthly: new Currency(59,'NOK')}],
+        acqs: ['Nets','Clearhaus', 'Swedbank'],
+        cards: ['visa','mastercard','jcb','amex',{title: 'Apple Pay',monthly: new Currency(24,'NOK')}],
         features: ['FraudControl','RecurringPayments','vipps'],
         fees: {
             trn() {
-              return new Currency(7.5 * $qty, 'NOK');
+              return new Currency(1 * $qty, 'NOK');
             }
         }
     },
-    {
-        name: 'Starter',
-        logo: 'quickpay.svg',
-        link: 'https://quickpay.net/no/pricing',
-        contactMail: 'support@quickpay.net',
-        acqs: ['Nets','Clearhaus', 'PensoPay', 'Swedbank'],
-        cards: ['visa','mastercard','jcb','amex',{title: 'Apple Pay',monthly: new Currency(59,'NOK')}],
-        features: ['FraudControl','RecurringPayments','vipps'],
-        fees: {
-            monthly: new Currency(99, 'NOK'),
-            trn() {
-                return new Currency(1.75 * $qty,'NOK');
-            }
-        }
-    },
-    {
-        name: 'Professional',
-        logo: 'quickpay.svg',
-        link: 'https://quickpay.net/no/pricing',
-        contactMail: 'support@quickpay.net',
-        acqs: ['Nets','Clearhaus', 'PensoPay', 'Swedbank'],
-        cards: ['visa','mastercard','jcb','amex',{title: 'Apple Pay',monthly: new Currency(59,'NOK')}],
-        features: ['vipps'],
-        fees: {
-            monthly: new Currency(199, 'NOK'),
-            trn() {
-                if($qty > 250) return new Currency(1 * ($qty - 250),'NOK');
-            }
-        }
-    }
 ];
